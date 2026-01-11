@@ -725,249 +725,180 @@
 
       </article>
 
+      <!-- Portfolio Section -->
+<section class="projects" id="portfolio">
+  <div class="section-container">
+    
+    <!-- Project Grid -->
+    <div class="project-grid">
+      
+      <!-- Project A -->
+      <div class="project-card">
+        <a href="#project-a-details" class="project-link">
+          <div class="project-thumb">
+            <img src="./assets/images/project-a-thumb.jpg" alt="Portfolio Optimization" loading="lazy">
+            <div class="project-overlay">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </div>
+          <h3 class="project-title">Portfolio Optimization</h3>
+          <p class="project-category">Financial Analytics</p>
+        </a>
+      </div>
 
+      <!-- Project B -->
+      <div class="project-card">
+        <a href="#project-b-details" class="project-link">
+          <div class="project-thumb">
+            <img src="./assets/images/project-b-thumb.jpg" alt="Financial Statement Analysis" loading="lazy">
+            <div class="project-overlay">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </div>
+          <h3 class="project-title">Financial Statement Analysis</h3>
+          <p class="project-category">Data Analysis</p>
+        </a>
+      </div>
 
+    </div>
 
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
+    <!-- Project A Details -->
+    <div class="project-details" id="project-a-details">
+      <div class="details-container">
+        <a href="#portfolio" class="back-link">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          Back to Portfolio
+        </a>
+        
+        <div class="details-content">
+          <div class="details-header">
+            <h2 class="details-title">Portfolio Optimization</h2>
+            <span class="details-category">Financial Analytics</span>
           </div>
 
-          <ul class="project-list">
+          <img src="./assets/images/project-a-detail.jpg" alt="Project detail" class="details-image">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+          <div class="details-section">
+            <h3>Project Overview</h3>
+            <p>
+              Multi-asset portfolio optimization using Modern Portfolio Theory (MPT). 
+              Calculates efficient frontier, optimal asset allocation, and risk-adjusted returns 
+              across equities, bonds, and commodities.
+            </p>
+            <ul>
+              <li>Sharpe ratio optimization</li>
+              <li>Value at Risk (VaR) analysis</li>
+              <li>Correlation matrix visualization</li>
+            </ul>
+          </div>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+          <div class="code-section">
+            <h3>Python Code Snippet</h3>
+            <pre><code class="language-python">import pandas as pd
+import numpy as np
+from scipy.optimize import minimize
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
+# Load data
+returns = pd.read_excel('portfolio_data.xlsx')
 
-                <h3 class="project-title">Finance</h3>
+# Portfolio optimization
+def portfolio_performance(weights, returns):
+    port_return = np.sum(returns.mean() * weights) * 252
+    port_vol = np.sqrt(np.dot(weights.T, np.dot(returns.cov() * 252, weights)))
+    return port_return, port_vol, port_return / port_vol
 
-                <p class="project-category">Web development</p>
+constraints = ({'type': 'eq', 'fun': lambda x: np.sum(x) - 1})
+bounds = tuple((0,1) for _ in range(len(returns.columns)))
+result = minimize(lambda w: -portfolio_performance(w, returns)[2], 
+                  np.array([1/len(returns.columns)]*len(returns.columns)),
+                  method='SLSQP', bounds=bounds, constraints=constraints)
+print(f"Optimal Sharpe: {portfolio_performance(result.x, returns)[2]:.2f}")</code></pre>
+          </div>
 
+          <div class="download-section">
+            <h3>Download Resources</h3>
+            <div class="download-grid">
+              <a href="./assets/files/project-a-data.xlsx" class="download-btn" download>
+                <ion-icon name="document-outline"></ion-icon>
+                Excel Data
               </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
+              <a href="./assets/files/project-a-code.py" class="download-btn" download>
+                <ion-icon name="code-outline"></ion-icon>
+                Python Code
               </a>
-            </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+    <!-- Project B Details -->
+    <div class="project-details" id="project-b-details">
+      <div class="details-container">
+        <a href="#portfolio" class="back-link">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          Back to Portfolio
+        </a>
+        
+        <div class="details-content">
+          <div class="details-header">
+            <h2 class="details-title">Financial Statement Analysis</h2>
+            <span class="details-category">Data Analysis</span>
+          </div>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+          <img src="./assets/images/project-b-detail.jpg" alt="Project detail" class="details-image">
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
+          <div class="details-section">
+            <h3>Project Overview</h3>
+            <p>
+              Automated financial ratio analysis framework with trend analysis, 
+              peer benchmarking, and DuPont ROE decomposition across multiple periods.
+            </p>
+            <ul>
+              <li>20+ financial ratios automated</li>
+              <li>DuPont analysis breakdown</li>
+              <li>Trend and peer comparison</li>
+            </ul>
+          </div>
 
-                <h3 class="project-title">Fundo</h3>
+          <div class="code-section">
+            <h3>Python Code Snippet</h3>
+            <pre><code class="language-python">import pandas as pd
 
-                <p class="project-category">Web design</p>
+def financial_ratios(bs, is_):
+    ratios = {}
+    ratios['current'] = bs['Current Assets'] / bs['Current Liabilities']
+    ratios['debt_eq'] = bs['Total Debt'] / bs['Equity']
+    ratios['roe'] = is_['Net Income'] / bs['Equity']
+    ratios['margin'] = is_['Net Income'] / is_['Revenue']
+    return pd.DataFrame(ratios)
 
+# Load and analyze
+bs = pd.read_excel('financials.xlsx', sheet_name='Balance Sheet')
+income = pd.read_excel('financials.xlsx', sheet_name='Income')
+ratios = financial_ratios(bs, income)
+print(ratios)</code></pre>
+          </div>
+
+          <div class="download-section">
+            <h3>Download Resources</h3>
+            <div class="download-grid">
+              <a href="./assets/files/project-b-data.xlsx" class="download-btn" download>
+                <ion-icon name="document-outline"></ion-icon>
+                Excel Data
               </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
+              <a href="./assets/files/project-b-code.py" class="download-btn" download>
+                <ion-icon name="code-outline"></ion-icon>
+                Python Code
               </a>
-            </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
+  </div>
+</section>
 
       <!--
         - #BLOG
