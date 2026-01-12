@@ -1,0 +1,23 @@
+<section class="about-text">
+
+  <p>
+    Event Studies: A Software Engineer's Finance Algorithm
+  </p>
+
+  <p>
+    As a software engineer tackling financial analysis, I built an event study framework to detect stock price reactions to corporate events. Think A/B testing for markets: compare target stock returns against market reference using sliding windows.
+  </p>
+
+  <p>
+    My Python pipeline reads Excel data, iterates through event days, runs linear regression on estimation windows (post-event 30 days), then calculates Abnormal Returns (AR) in event windows (±b days). The magic: t-statistics where |t-stat|>1.96 (yellow-highlighted in Excel) flags statistically significant reactions at 95% confidence.
+  </p>
+
+  <p>
+    Key outputs: CAR (Cumulative AR), AAR (Average AR), and regression metrics (alpha, beta, R²). Results auto-save with blank rows separating iterations for readability. Engineering principles shine: data pipelines, error handling, scalability.
+  </p>
+
+   <p>
+   This reveals market efficiency gaps around earnings, M&A, regulatory events. One script replaces manual Excel drudgery, testing hundreds of event dates systematically. Finance through code: reproducible, scalable, and precise. 
+   </p>
+  
+</section>
