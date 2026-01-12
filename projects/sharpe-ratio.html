@@ -1,23 +1,155 @@
-<section class="about-text">
+<!DOCTYPE html>
+<html lang="en">
 
-  <p>
-    Event Studies: A Software Engineer's Finance Algorithm
-  </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharpe Ratio Optimisation | Yogdeep Gupta</title>
 
-  <p>
-    As a software engineer tackling financial analysis, I built an event study framework to detect stock price reactions to corporate events. Think A/B testing for markets: compare target stock returns against market reference using sliding windows.
-  </p>
+  <!-- Main site CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
 
-  <p>
-    My Python pipeline reads Excel data, iterates through event days, runs linear regression on estimation windows (post-event 30 days), then calculates Abnormal Returns (AR) in event windows (±b days). The magic: t-statistics where |t-stat|>1.96 (yellow-highlighted in Excel) flags statistically significant reactions at 95% confidence.
-  </p>
+<body>
 
-  <p>
-    Key outputs: CAR (Cumulative AR), AAR (Average AR), and regression metrics (alpha, beta, R²). Results auto-save with blank rows separating iterations for readability. Engineering principles shine: data pipelines, error handling, scalability.
-  </p>
+<main style="margin-top: 60px; margin-bottom: 60px;">
 
-   <p>
-   This reveals market efficiency gaps around earnings, M&A, regulatory events. One script replaces manual Excel drudgery, testing hundreds of event dates systematically. Finance through code: reproducible, scalable, and precise. 
-   </p>
-  
-</section>
+  <article class="resume active">
+
+    <!-- PAGE HEADER -->
+    <header>
+      <h2 class="h2 article-title">Sharpe Ratio Optimisation</h2>
+    </header>
+
+    <!-- PROJECT DESCRIPTION -->
+    <section class="about-text">
+
+      <p>
+        This project focuses on building an optimized multi-asset portfolio using
+        principles of Modern Portfolio Theory to maximize risk-adjusted returns.
+      </p>
+
+      <p>
+        Eight equity funds across diversified strategies including mid-cap,
+        small-cap, contrarian, dividend, value, and special situations were analyzed
+        using historical return data and covariance matrices.
+      </p>
+
+      <p>
+        Portfolio weights were optimized using Excel Solver to maximize the Sharpe
+        Ratio. The optimized portfolio achieved a Sharpe Ratio of
+        <strong>1.73</strong>, significantly outperforming the S&P 500 benchmark
+        Sharpe Ratio of <strong>0.98</strong>.
+      </p>
+
+      <p>
+        The project demonstrates practical applications of diversification,
+        portfolio variance minimization, and disciplined risk management through
+        systematic asset allocation.
+      </p>
+
+    </section>
+
+    <!-- KEY DETAILS -->
+    <section class="service">
+
+      <h3 class="h3 service-title">Project Highlights</h3>
+
+      <ul class="service-list">
+
+        <li class="service-item">
+          <div class="service-content-box">
+            <h4 class="h4 service-item-title">Objective</h4>
+            <p class="service-item-text">
+              To construct a multi-asset portfolio that maximizes risk-adjusted
+              returns using the Sharpe Ratio as the optimization metric.
+            </p>
+          </div>
+        </li>
+
+        <li class="service-item">
+          <div class="service-content-box">
+            <h4 class="h4 service-item-title">Methodology</h4>
+            <p class="service-item-text">
+              Historical return analysis, covariance estimation, and Excel Solver–
+              based optimization under realistic constraints.
+            </p>
+          </div>
+        </li>
+
+        <li class="service-item">
+          <div class="service-content-box">
+            <h4 class="h4 service-item-title">Outcome</h4>
+            <p class="service-item-text">
+              Achieved superior diversification benefits and improved risk-adjusted
+              performance compared to benchmark indices.
+            </p>
+          </div>
+        </li>
+
+      </ul>
+
+    </section>
+
+    <!-- EXCEL VISUAL -->
+    <section class="timeline">
+
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="bar-chart-outline"></ion-icon>
+        </div>
+        <h3 class="h3">Portfolio Optimisation Model (Excel)</h3>
+      </div>
+
+      <p class="about-text">
+        The Excel model below shows the return calculations, covariance matrix,
+        optimized portfolio weights, and Sharpe Ratio computation used in this
+        project.
+      </p>
+
+      <!-- GOOGLE SHEETS EMBED -->
+      <div style="
+        width: 100%;
+        height: 600px;
+        margin-top: 20px;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--jet);
+      ">
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/1Ibol0T5eJO6iiun2z152ozpUYZ76_XKojGGxZBLVWRU/edit?usp=sharing"
+          width="100%"
+          height="100%"
+          frameborder="0">
+        </iframe>
+      </div>
+
+    </section>
+
+    <!-- DOWNLOAD EXCEL -->
+    <section style="margin-top: 30px;">
+      <a href="../assets/files/sharpe_ratio_model.xlsx"
+         class="form-btn"
+         download>
+        <ion-icon name="download-outline"></ion-icon>
+        Download Excel Model
+      </a>
+    </section>
+
+    <!-- BACK BUTTON -->
+    <section style="margin-top: 40px;">
+      <a href="../index.html" class="form-btn">
+        ← Back to Portfolio
+      </a>
+    </section>
+
+  </article>
+
+</main>
+
+<!-- Ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
