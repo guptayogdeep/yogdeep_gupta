@@ -728,132 +728,146 @@
 
 
 
+<!--
+  - #PORTFOLIO
+-->
 
-      <!--
-        - #PORTFOLIO
-      -->
+<article class="portfolio" data-page="portfolio">
 
-      <article class="portfolio" data-page="portfolio">
+  <header>
+    <h2 class="h2 article-title">Portfolio</h2>
+  </header>
 
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
+  <section class="projects">
 
-        <section class="projects">
+    <!-- FILTER BUTTONS -->
+    <ul class="filter-list">
 
-          <ul class="filter-list">
+      <li class="filter-item">
+        <button class="active" data-filter-btn>all</button>
+      </li>
 
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
+      <li class="filter-item">
+        <button data-filter-btn>portfolio designing</button>
+      </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Portfolio Designing</button>
-            </li>
+      <li class="filter-item">
+        <button data-filter-btn>applications</button>
+      </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
+      <li class="filter-item">
+        <button data-filter-btn>web development</button>
+      </li>
 
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
+    </ul>
 
-          </ul>
+    <!-- MOBILE DROPDOWN FILTER -->
+    <div class="filter-select-box">
 
-          <div class="filter-select-box">
+      <button class="filter-select" data-select>
+        <div class="select-value" data-selecct-value>Select category</div>
 
-            <button class="filter-select" data-select>
+        <div class="select-icon">
+          <ion-icon name="chevron-down"></ion-icon>
+        </div>
+      </button>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+      <ul class="select-list">
 
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
+        <li class="select-item">
+          <button data-select-item>all</button>
+        </li>
 
-            </button>
+        <li class="select-item">
+          <button data-select-item>portfolio designing</button>
+        </li>
 
-            <ul class="select-list">
+        <li class="select-item">
+          <button data-select-item>applications</button>
+        </li>
 
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
+        <li class="select-item">
+          <button data-select-item>web development</button>
+        </li>
 
-              <li class="select-item">
-                <button data-select-item>Financial analysis using python</button>
-              </li>
+      </ul>
 
-              <li class="select-item">
-                <button data-select-item>Portfolio Designing</button>
-              </li>
+    </div>
 
-            </ul>
+    <!-- PROJECT LIST -->
+    <ul class="project-list">
 
-          </div>
+      <!-- PORTFOLIO DESIGNING -->
+      <li class="project-item active"
+          data-filter-item
+          data-category="portfolio designing">
+        <a href="#">
 
-          <ul class="project-list">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
 
-            <li class="project-item  active" data-filter-item data-category="Portfolio Designing">
-              <a href="#">
+            <img src="./assets/images/project-1.jpg"
+                 alt="Sharpe ratio optimisation"
+                 loading="lazy">
+          </figure>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+          <h3 class="project-title">Sharpe Ratio Optimisation</h3>
+          <p class="project-category">Portfolio Designing</p>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
+        </a>
+      </li>
 
-                <h3 class="project-title">Sharpe ratio Optimisation</h3>
+      <!-- WEB DEVELOPMENT -->
+      <li class="project-item active"
+          data-filter-item
+          data-category="web development">
+        <a href="#">
 
-                <p class="project-category">Portfolio Designing</p>
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
 
-              </a>
-            </li>
+            <img src="./assets/images/project-2.png"
+                 alt="Web development project"
+                 loading="lazy">
+          </figure>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+          <h3 class="project-title">Orizon</h3>
+          <p class="project-category">Web Development</p>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+        </a>
+      </li>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
+      <!-- APPLICATIONS -->
+      <li class="project-item active"
+          data-filter-item
+          data-category="applications">
+        <a href="#">
 
-                <h3 class="project-title">Orizon</h3>
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
 
-                <p class="project-category">Web development</p>
+            <img src="./assets/images/project-3.jpg"
+                 alt="Application project"
+                 loading="lazy">
+          </figure>
 
-              </a>
-            </li>
+          <h3 class="project-title">Fundo</h3>
+          <p class="project-category">Applications</p>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+        </a>
+      </li>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+    </ul>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
+  </section>
 
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
+</article>
 
 
 
