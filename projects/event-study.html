@@ -117,37 +117,47 @@
         font-size: 13px;
         line-height: 1.6;
       "><code>
+        import numpy as np
 import pandas as pd
-import statsmodels.api as sm
+from scipy import stats
 
-prices = pd.read_excel("input_data.xlsx")
+def event_study_analysis_iterative():
+    """
+    Iterative Event Study Analysis Code
+    Reads data from data.xlsx and calculates AR for multiple event pointers
+    """
 
-for event_day in event_days:
+    print("=" * 60)
+    print("ITERATIVE EVENT STUDY ANALYSIS")
+    print("=" * 60)
 
-    estimation_window = prices.loc[event_day+1 : event_day+30]
-    event_window = prices.loc[event_day-b : event_day+b]
+    # Read data from Excel file
+    try:
+        df = pd.read_excel('data.xlsx')
+        print(f"\n✓ Successfully loaded data.xlsx")
+        print(f"  Rows: {len(df)}")
+        print(f"  Columns: {list(df.columns)}")
+    except FileNotFoundError:
+        print("\nERROR: data.xlsx not found in the current directory!")
+        print("Please ensure data.xlsx is in the same folder as this script.")
+        return None
+    except Exception as e:
+        print(f"\nERROR: Could not read data.xlsx - {e}")
+        return None
 
-    X = sm.add_constant(estimation_window['market_return'])
-    y = estimation_window['stock_return']
-
-    model = sm.OLS(y, X).fit()
-    alpha, beta = model.params
-
-    event_window['AR'] = (
-        event_window['stock_return'] -
-        (alpha + beta * event_window['market_return'])
-    )
-
-    t_stat = event_window['AR'].mean() / event_window['AR'].std()
-
-    save_to_excel(event_window, t_stat)
+.
+        .
+        .
+        .
+        .
+        .
       </code></pre>
 
     </section>
 
     <!-- PYTHON DOWNLOAD -->
     <section style="margin-top: 20px;">
-      <a href="../assets/code/event_study.py"
+      <a href="../assets/files/event_study.py"
          class="form-btn"
          download>
         <ion-icon name="download-outline"></ion-icon>
