@@ -535,6 +535,16 @@
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
+        <!-- DOWNLOAD RESUME BUTTON -->
+        <section style="margin-bottom: 30px;">
+          <a href="./assets/files/Yogdeep_Gupta_Resume.pdf"
+            class="form-btn"
+            download>
+            <ion-icon name="download-outline"></ion-icon>
+            Download Resume
+          </a>
+        </section>
+
         <section class="timeline">
 
           <div class="title-wrapper">
@@ -684,26 +694,6 @@
           </ol>
 
         </section>
-        
-        
-
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <!-- DOWNLOAD RESUME BUTTON -->
-        <section style="margin-bottom: 30px;">
-          <a href="./assets/files/Yogdeep_Gupta_Resume.pdf"
-            class="form-btn"
-            download>
-            <ion-icon name="download-outline"></ion-icon>
-            Download Resume
-          </a>
-        </section>
-
-
-
       </article>
 
 
@@ -851,44 +841,52 @@
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+<!--
+  - #CONTACT
+-->
 
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
+<article class="contact" data-page="contact">
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.720097462057!2d85.283897!3d23.314742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e5a5f6a8a4ab%3A0x7a47a94c9b5e4d6a!2sIndian%20Institute%20of%20Management%20Ranchi!5e0!3m2!1sen!2sin!4v1700000000000"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
+  <header>
+    <h2 class="h2 article-title">Contact</h2>
+  </header>
 
-        <section class="contact-form">
+  <!-- MAP -->
+  <section class="mapbox" data-mapbox>
+    <figure>
+      <iframe
+        src="https://www.google.com/maps?q=Indian+Institute+of+Management+Ranchi&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </figure>
+  </section>
 
-          <h3 class="h3 form-title">Contact Form</h3>
+  <!-- CONTACT CTA -->
+  <section class="contact-form" style="text-align: center;">
 
-          <form action="#" class="form" data-form>
+    <h3 class="h3 form-title">Let’s Connect</h3>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+    <p style="color: var(--light-gray); margin-bottom: 25px;">
+      Have a question, collaboration idea, or opportunity?  
+      Reach out using the link below.
+    </p>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSfW1DFr15pNO8pDvYOpATOnkzJwH2kW3qItXR3wFtxz_t5yfA/viewform"
+      target="_blank"
+      class="form-btn"
+      style="display: inline-flex; justify-content: center;">
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+      <ion-icon name="mail-outline"></ion-icon>
+      <span>Contact Me</span>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+    </a>
 
-          </form>
+  </section>
 
-        </section>
+</article>
 
-      </article>
 
     </div>
 
